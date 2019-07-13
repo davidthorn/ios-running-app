@@ -11,8 +11,53 @@ import CoreLocation
 import MyRunningAppMapView
 import MapKit
 
+func hmsFrom(seconds: Int) -> String {
+    
+    guard seconds > 59 else { return "\(seconds)" }
+    let hours = seconds / 3600
+    let mins = (seconds % 3600) / 60
+    let secs =  (seconds % 3600) % 60
+    
+    if hours == 0 {
+        return "\(getStringFrom(number: mins)):\(getStringFrom(number: secs))"
+    }
+    
+    return "\(getStringFrom(number: hours)):\(getStringFrom(number: mins)):\(getStringFrom(number: secs))"
+}
+
+func getStringFrom(number: Int) -> String {
+    
+    return number < 10 ? "0\(number)" : "\(number)"
+}
+
+
 class ViewController: UIViewController {
 
+    @IBOutlet weak var timeLabel: UILabel!
+    var timer: Timer!
+    
+    var startTime: TimeInterval! {
+        didSet {
+            guard let time = self.startTime else { return }
+            if #available(iOS 10.0, *) {
+                self.timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { (timer) in
+                    DispatchQueue.main.async {
+                        let time = Date.init().timeIntervalSince1970 - time
+                        self.timeLabel.text = hmsFrom(seconds: Int(time))
+                    }
+                }
+            }
+        }
+    }
+    
+    var endTime: TimeInterval! {
+        didSet {
+            guard let _ = self.endTime else { return }
+            self.timer.invalidate()
+            self.timer = nil
+        }
+    }
+    
     var stopButtonColor: UIColor!
     var startButtonColor: UIColor!
     @IBOutlet weak var stopButton: UIButton! {
@@ -45,6 +90,7 @@ class ViewController: UIViewController {
         startButton.backgroundColor = self.startButtonColor
         sender.backgroundColor = .darkGray
         self.locationManager.stopUpdatingLocation()
+        self.endTime = Date.init().timeIntervalSince1970
     }
     
     var startLocation: CLLocation? {
@@ -61,7 +107,12 @@ class ViewController: UIViewController {
         return vc
     }()
     
-    @IBOutlet weak var mapHolder: UIView!
+    @IBOutlet weak var mapHolder: UIView! {
+        didSet {
+            guard let holder = self.mapHolder else { return }
+            holder.clipsToBounds = true
+        }
+    }
     
     internal func startTrackingPosition() {
         self.locationManager.startUpdatingLocation()
@@ -73,7 +124,7 @@ class ViewController: UIViewController {
         let map = self.mapController!
         map.routeColor = .purple
         map.view.autoresizingMask = [.flexibleWidth , .flexibleHeight]
-        map.view.frame = view.bounds
+        map.view.frame = mapHolder.bounds
         mapHolder.addSubview(map.view)
         self.addChild(map)
         
@@ -109,6 +160,7 @@ extension ViewController: CLLocationManagerDelegate {
         
         if self.startLocation == nil {
             self.startLocation = location
+            self.startTime = Date.init().timeIntervalSince1970
         } else {
             self.mapController.addLocation(location: location)
         }
