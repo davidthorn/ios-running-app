@@ -71,6 +71,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
     
         let map = self.mapController!
+        map.routeColor = .purple
         map.view.autoresizingMask = [.flexibleWidth , .flexibleHeight]
         map.view.frame = view.bounds
         mapHolder.addSubview(map.view)
@@ -108,9 +109,9 @@ extension ViewController: CLLocationManagerDelegate {
         
         if self.startLocation == nil {
             self.startLocation = location
+        } else {
+            self.mapController.addLocation(location: location)
         }
-        
-        print(location)
     }
     
 }
