@@ -3,18 +3,57 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		060218F0EC502BE712BD2574 /* Pods_MyRunningAppMapView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6DF4713F73A910A93393A51 /* Pods_MyRunningAppMapView.framework */; };
+		1E3CF0C8B12A3270336CD9D9 /* Pods_AppLocationManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA421301BD67B8739321BAC2 /* Pods_AppLocationManager.framework */; };
+		44552B6622DA0C92005272CD /* MyRunningAppMapView.h in Headers */ = {isa = PBXBuildFile; fileRef = 44552B6422DA0C92005272CD /* MyRunningAppMapView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		44552B6922DA0C92005272CD /* MyRunningAppMapView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44552B6222DA0C92005272CD /* MyRunningAppMapView.framework */; };
+		44552B6A22DA0C92005272CD /* MyRunningAppMapView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 44552B6222DA0C92005272CD /* MyRunningAppMapView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		44552B7322DA0DA9005272CD /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44552B7222DA0DA9005272CD /* MapViewController.swift */; };
 		449CCC9622DA01B1003EBEA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449CCC9522DA01B1003EBEA3 /* AppDelegate.swift */; };
 		449CCC9822DA01B1003EBEA3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449CCC9722DA01B1003EBEA3 /* ViewController.swift */; };
 		449CCC9B22DA01B1003EBEA3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 449CCC9922DA01B1003EBEA3 /* Main.storyboard */; };
 		449CCC9D22DA01B3003EBEA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 449CCC9C22DA01B3003EBEA3 /* Assets.xcassets */; };
 		449CCCA022DA01B3003EBEA3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 449CCC9E22DA01B3003EBEA3 /* LaunchScreen.storyboard */; };
+		449CCCB122DA04EF003EBEA3 /* AppLocationManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 449CCCAF22DA04EF003EBEA3 /* AppLocationManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		449CCCB722DA056F003EBEA3 /* AppLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449CCCB622DA056F003EBEA3 /* AppLocationManager.swift */; };
+		FD1363A5B9EC18FBB730A6B3 /* Pods_MyRunningApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 547A4B0CDB13D01DF991E742 /* Pods_MyRunningApp.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		44552B6722DA0C92005272CD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 449CCC8A22DA01B1003EBEA3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 44552B6122DA0C92005272CD;
+			remoteInfo = MyRunningAppMapView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		44552B6E22DA0C92005272CD /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				44552B6A22DA0C92005272CD /* MyRunningAppMapView.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		2E8830366FF4F814B03A75DC /* Pods-AppLocationManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppLocationManager.debug.xcconfig"; path = "Target Support Files/Pods-AppLocationManager/Pods-AppLocationManager.debug.xcconfig"; sourceTree = "<group>"; };
+		44552B6222DA0C92005272CD /* MyRunningAppMapView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MyRunningAppMapView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		44552B6422DA0C92005272CD /* MyRunningAppMapView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyRunningAppMapView.h; sourceTree = "<group>"; };
+		44552B6522DA0C92005272CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		44552B6F22DA0CC7005272CD /* MyRunningAppMapView.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = MyRunningAppMapView.podspec; sourceTree = "<group>"; };
+		44552B7222DA0DA9005272CD /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		449CCC9222DA01B1003EBEA3 /* MyRunningApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyRunningApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		449CCC9522DA01B1003EBEA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		449CCC9722DA01B1003EBEA3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,24 +61,97 @@
 		449CCC9C22DA01B3003EBEA3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		449CCC9F22DA01B3003EBEA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		449CCCA122DA01B3003EBEA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		449CCCA722DA0426003EBEA3 /* AppLocationManager.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = AppLocationManager.podspec; sourceTree = "<group>"; };
+		449CCCAD22DA04EF003EBEA3 /* AppLocationManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AppLocationManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		449CCCAF22DA04EF003EBEA3 /* AppLocationManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppLocationManager.h; sourceTree = "<group>"; };
+		449CCCB022DA04EF003EBEA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		449CCCB622DA056F003EBEA3 /* AppLocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLocationManager.swift; sourceTree = "<group>"; };
+		547A4B0CDB13D01DF991E742 /* Pods_MyRunningApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyRunningApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		55EE465B5714307CA2838B53 /* Pods-MyRunningApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyRunningApp.debug.xcconfig"; path = "Target Support Files/Pods-MyRunningApp/Pods-MyRunningApp.debug.xcconfig"; sourceTree = "<group>"; };
+		79EB9A4C3A65E444344700EE /* Pods-MyRunningApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyRunningApp.release.xcconfig"; path = "Target Support Files/Pods-MyRunningApp/Pods-MyRunningApp.release.xcconfig"; sourceTree = "<group>"; };
+		930B889984832E05BAA23A5C /* Pods-MyRunningAppMapView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyRunningAppMapView.release.xcconfig"; path = "Target Support Files/Pods-MyRunningAppMapView/Pods-MyRunningAppMapView.release.xcconfig"; sourceTree = "<group>"; };
+		9429FCF411C793F9FA999E93 /* Pods-AppLocationManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppLocationManager.release.xcconfig"; path = "Target Support Files/Pods-AppLocationManager/Pods-AppLocationManager.release.xcconfig"; sourceTree = "<group>"; };
+		BA421301BD67B8739321BAC2 /* Pods_AppLocationManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppLocationManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6DF4713F73A910A93393A51 /* Pods_MyRunningAppMapView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyRunningAppMapView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EEE2FA6B0846EB15874A7BE6 /* Pods-MyRunningAppMapView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyRunningAppMapView.debug.xcconfig"; path = "Target Support Files/Pods-MyRunningAppMapView/Pods-MyRunningAppMapView.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		44552B5F22DA0C92005272CD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				060218F0EC502BE712BD2574 /* Pods_MyRunningAppMapView.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		449CCC8F22DA01B1003EBEA3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44552B6922DA0C92005272CD /* MyRunningAppMapView.framework in Frameworks */,
+				FD1363A5B9EC18FBB730A6B3 /* Pods_MyRunningApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		449CCCAA22DA04EF003EBEA3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E3CF0C8B12A3270336CD9D9 /* Pods_AppLocationManager.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2555064362F359735459A540 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				547A4B0CDB13D01DF991E742 /* Pods_MyRunningApp.framework */,
+				BA421301BD67B8739321BAC2 /* Pods_AppLocationManager.framework */,
+				C6DF4713F73A910A93393A51 /* Pods_MyRunningAppMapView.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		44552B6322DA0C92005272CD /* MyRunningAppMapView */ = {
+			isa = PBXGroup;
+			children = (
+				44552B7122DA0D96005272CD /* Assets */,
+				44552B7022DA0D90005272CD /* Classes */,
+				44552B6422DA0C92005272CD /* MyRunningAppMapView.h */,
+				44552B6522DA0C92005272CD /* Info.plist */,
+			);
+			path = MyRunningAppMapView;
+			sourceTree = "<group>";
+		};
+		44552B7022DA0D90005272CD /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				44552B7222DA0DA9005272CD /* MapViewController.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		44552B7122DA0D96005272CD /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 		449CCC8922DA01B1003EBEA3 = {
 			isa = PBXGroup;
 			children = (
+				44552B6F22DA0CC7005272CD /* MyRunningAppMapView.podspec */,
+				449CCCA722DA0426003EBEA3 /* AppLocationManager.podspec */,
 				449CCC9422DA01B1003EBEA3 /* MyRunningApp */,
+				449CCCAE22DA04EF003EBEA3 /* AppLocationManager */,
+				44552B6322DA0C92005272CD /* MyRunningAppMapView */,
 				449CCC9322DA01B1003EBEA3 /* Products */,
+				7F3677E8E741858697D3D8C1 /* Pods */,
+				2555064362F359735459A540 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -47,6 +159,8 @@
 			isa = PBXGroup;
 			children = (
 				449CCC9222DA01B1003EBEA3 /* MyRunningApp.app */,
+				449CCCAD22DA04EF003EBEA3 /* AppLocationManager.framework */,
+				44552B6222DA0C92005272CD /* MyRunningAppMapView.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -64,25 +178,117 @@
 			path = MyRunningApp;
 			sourceTree = "<group>";
 		};
+		449CCCAE22DA04EF003EBEA3 /* AppLocationManager */ = {
+			isa = PBXGroup;
+			children = (
+				449CCCB522DA0560003EBEA3 /* Classes */,
+				449CCCAF22DA04EF003EBEA3 /* AppLocationManager.h */,
+				449CCCB022DA04EF003EBEA3 /* Info.plist */,
+			);
+			path = AppLocationManager;
+			sourceTree = "<group>";
+		};
+		449CCCB522DA0560003EBEA3 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				449CCCB622DA056F003EBEA3 /* AppLocationManager.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		7F3677E8E741858697D3D8C1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				55EE465B5714307CA2838B53 /* Pods-MyRunningApp.debug.xcconfig */,
+				79EB9A4C3A65E444344700EE /* Pods-MyRunningApp.release.xcconfig */,
+				2E8830366FF4F814B03A75DC /* Pods-AppLocationManager.debug.xcconfig */,
+				9429FCF411C793F9FA999E93 /* Pods-AppLocationManager.release.xcconfig */,
+				EEE2FA6B0846EB15874A7BE6 /* Pods-MyRunningAppMapView.debug.xcconfig */,
+				930B889984832E05BAA23A5C /* Pods-MyRunningAppMapView.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		44552B5D22DA0C92005272CD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44552B6622DA0C92005272CD /* MyRunningAppMapView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		449CCCA822DA04EF003EBEA3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				449CCCB122DA04EF003EBEA3 /* AppLocationManager.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
-		449CCC9122DA01B1003EBEA3 /* MyRunningApp */ = {
+		44552B6122DA0C92005272CD /* MyRunningAppMapView */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 449CCCA422DA01B3003EBEA3 /* Build configuration list for PBXNativeTarget "MyRunningApp" */;
+			buildConfigurationList = 44552B6B22DA0C92005272CD /* Build configuration list for PBXNativeTarget "MyRunningAppMapView" */;
 			buildPhases = (
-				449CCC8E22DA01B1003EBEA3 /* Sources */,
-				449CCC8F22DA01B1003EBEA3 /* Frameworks */,
-				449CCC9022DA01B1003EBEA3 /* Resources */,
+				C6D62C71D8357A9CB069E22A /* [CP] Check Pods Manifest.lock */,
+				44552B5D22DA0C92005272CD /* Headers */,
+				44552B5E22DA0C92005272CD /* Sources */,
+				44552B5F22DA0C92005272CD /* Frameworks */,
+				44552B6022DA0C92005272CD /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
+			name = MyRunningAppMapView;
+			productName = MyRunningAppMapView;
+			productReference = 44552B6222DA0C92005272CD /* MyRunningAppMapView.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		449CCC9122DA01B1003EBEA3 /* MyRunningApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 449CCCA422DA01B3003EBEA3 /* Build configuration list for PBXNativeTarget "MyRunningApp" */;
+			buildPhases = (
+				5A10D062B0E0DC95AECB6676 /* [CP] Check Pods Manifest.lock */,
+				449CCC8E22DA01B1003EBEA3 /* Sources */,
+				449CCC8F22DA01B1003EBEA3 /* Frameworks */,
+				449CCC9022DA01B1003EBEA3 /* Resources */,
+				CCEE9AFEAEA6059FA4DC0C8D /* [CP] Embed Pods Frameworks */,
+				44552B6E22DA0C92005272CD /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				44552B6822DA0C92005272CD /* PBXTargetDependency */,
+			);
 			name = MyRunningApp;
 			productName = MyRunningApp;
 			productReference = 449CCC9222DA01B1003EBEA3 /* MyRunningApp.app */;
 			productType = "com.apple.product-type.application";
+		};
+		449CCCAC22DA04EF003EBEA3 /* AppLocationManager */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 449CCCB222DA04EF003EBEA3 /* Build configuration list for PBXNativeTarget "AppLocationManager" */;
+			buildPhases = (
+				D9378BF3A8A1E1CDBAB75D30 /* [CP] Check Pods Manifest.lock */,
+				449CCCA822DA04EF003EBEA3 /* Headers */,
+				449CCCA922DA04EF003EBEA3 /* Sources */,
+				449CCCAA22DA04EF003EBEA3 /* Frameworks */,
+				449CCCAB22DA04EF003EBEA3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AppLocationManager;
+			productName = AppLocationManager;
+			productReference = 449CCCAD22DA04EF003EBEA3 /* AppLocationManager.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -90,12 +296,26 @@
 		449CCC8A22DA01B1003EBEA3 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				DefaultBuildSystemTypeForWorkspace = Original;
 				LastSwiftUpdateCheck = 1020;
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "David Thorn";
 				TargetAttributes = {
+					44552B6122DA0C92005272CD = {
+						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1020;
+					};
 					449CCC9122DA01B1003EBEA3 = {
 						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
+					449CCCAC22DA04EF003EBEA3 = {
+						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -113,11 +333,20 @@
 			projectRoot = "";
 			targets = (
 				449CCC9122DA01B1003EBEA3 /* MyRunningApp */,
+				449CCCAC22DA04EF003EBEA3 /* AppLocationManager */,
+				44552B6122DA0C92005272CD /* MyRunningAppMapView */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		44552B6022DA0C92005272CD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		449CCC9022DA01B1003EBEA3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -128,9 +357,110 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		449CCCAB22DA04EF003EBEA3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5A10D062B0E0DC95AECB6676 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MyRunningApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C6D62C71D8357A9CB069E22A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MyRunningAppMapView-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CCEE9AFEAEA6059FA4DC0C8D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyRunningApp/Pods-MyRunningApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyRunningApp/Pods-MyRunningApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MyRunningApp/Pods-MyRunningApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D9378BF3A8A1E1CDBAB75D30 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AppLocationManager-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		44552B5E22DA0C92005272CD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44552B7322DA0DA9005272CD /* MapViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		449CCC8E22DA01B1003EBEA3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -140,7 +470,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		449CCCA922DA04EF003EBEA3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				449CCCB722DA056F003EBEA3 /* AppLocationManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		44552B6822DA0C92005272CD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 44552B6122DA0C92005272CD /* MyRunningAppMapView */;
+			targetProxy = 44552B6722DA0C92005272CD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		449CCC9922DA01B1003EBEA3 /* Main.storyboard */ = {
@@ -162,6 +508,67 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		44552B6C22DA0C92005272CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EEE2FA6B0846EB15874A7BE6 /* Pods-MyRunningAppMapView.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = MyRunningAppMapView/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = thorn.james.david.MyRunningAppMapView;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		44552B6D22DA0C92005272CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 930B889984832E05BAA23A5C /* Pods-MyRunningAppMapView.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = MyRunningAppMapView/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = thorn.james.david.MyRunningAppMapView;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		449CCCA222DA01B3003EBEA3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -213,7 +620,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -268,7 +675,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -280,10 +687,13 @@
 		};
 		449CCCA522DA01B3003EBEA3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 55EE465B5714307CA2838B53 /* Pods-MyRunningApp.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MyRunningApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -297,10 +707,13 @@
 		};
 		449CCCA622DA01B3003EBEA3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 79EB9A4C3A65E444344700EE /* Pods-MyRunningApp.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MyRunningApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -312,9 +725,79 @@
 			};
 			name = Release;
 		};
+		449CCCB322DA04EF003EBEA3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E8830366FF4F814B03A75DC /* Pods-AppLocationManager.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = AppLocationManager/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = thorn.james.david.AppLocationManager;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		449CCCB422DA04EF003EBEA3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9429FCF411C793F9FA999E93 /* Pods-AppLocationManager.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = AppLocationManager/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = thorn.james.david.AppLocationManager;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		44552B6B22DA0C92005272CD /* Build configuration list for PBXNativeTarget "MyRunningAppMapView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				44552B6C22DA0C92005272CD /* Debug */,
+				44552B6D22DA0C92005272CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		449CCC8D22DA01B1003EBEA3 /* Build configuration list for PBXProject "MyRunningApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -329,6 +812,15 @@
 			buildConfigurations = (
 				449CCCA522DA01B3003EBEA3 /* Debug */,
 				449CCCA622DA01B3003EBEA3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		449CCCB222DA04EF003EBEA3 /* Build configuration list for PBXNativeTarget "AppLocationManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				449CCCB322DA04EF003EBEA3 /* Debug */,
+				449CCCB422DA04EF003EBEA3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
