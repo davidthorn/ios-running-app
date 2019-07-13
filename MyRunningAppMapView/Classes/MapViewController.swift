@@ -10,8 +10,23 @@ import UIKit
 import MapKit
 
 open class MapViewController: UIViewController {
+
+    public var cameraDistance: CLLocationDistance = 12000
+    public var cameraPitch: CGFloat = 0
+    public var cameraHeading: CLLocationDirection = 0
     
-    public lazy var mapView: MKMapView = {
+    public var startLocation: CLLocation? {
+        didSet {
+            guard let location = self.startLocation else { return }
+            let camera = MKMapCamera.init(lookingAtCenter: location.coordinate,
+                                          fromDistance: cameraDistance,
+                                          pitch: cameraPitch,
+                                          heading: cameraHeading)
+            mapView.setCamera(camera, animated: true)
+        }
+    }
+    
+    internal lazy var mapView: MKMapView = {
       let map = MKMapView.init(frame: .zero)
         self.view.addSubview(map)
         map.translatesAutoresizingMaskIntoConstraints = false

@@ -9,9 +9,51 @@
 import UIKit
 import CoreLocation
 import MyRunningAppMapView
+import MapKit
 
 class ViewController: UIViewController {
 
+    var stopButtonColor: UIColor!
+    var startButtonColor: UIColor!
+    @IBOutlet weak var stopButton: UIButton! {
+        didSet {
+            guard let button = self.stopButton else { return }
+            self.stopButtonColor = button.backgroundColor
+            button.backgroundColor = .darkGray
+            button.isEnabled = false
+        }
+    }
+    @IBOutlet weak var startButton: UIButton! {
+        didSet {
+            guard let button = self.startButton else { return }
+            self.startButtonColor = button.backgroundColor
+            button.isEnabled = false
+        }
+    }
+    
+    @IBAction func startButtonAction(_ sender: UIButton) {
+        self.startTrackingPosition()
+        sender.isEnabled = false
+        sender.backgroundColor = .darkGray
+        stopButton.backgroundColor = self.stopButtonColor
+        stopButton.isEnabled = true
+    }
+    
+    @IBAction func stopButtonAction(_ sender: UIButton) {
+        sender.isEnabled = false
+        startButton.isEnabled = true
+        startButton.backgroundColor = self.startButtonColor
+        sender.backgroundColor = .darkGray
+        self.locationManager.stopUpdatingLocation()
+    }
+    
+    var startLocation: CLLocation? {
+        didSet {
+            guard let location = self.startLocation else { return }
+            self.mapController.startLocation = location
+        }
+    }
+    
     var locationManager: CLLocationManager!
     
     lazy var mapController: MapViewController! = {
@@ -19,13 +61,19 @@ class ViewController: UIViewController {
         return vc
     }()
     
+    @IBOutlet weak var mapHolder: UIView!
+    
+    internal func startTrackingPosition() {
+        self.locationManager.startUpdatingLocation()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     
         let map = self.mapController!
         map.view.autoresizingMask = [.flexibleWidth , .flexibleHeight]
         map.view.frame = view.bounds
-        view.addSubview(map.view)
+        mapHolder.addSubview(map.view)
         self.addChild(map)
         
         self.locationManager = CLLocationManager.init()
@@ -35,6 +83,7 @@ class ViewController: UIViewController {
         switch CLLocationManager.authorizationStatus() {
         case .authorizedAlways:
             print("we have the correct permissions")
+            self.startButton.isEnabled = true
         case .authorizedWhenInUse:
             print("this is a problem because it need to work when the screen is closed")
         case .denied,.restricted:
@@ -46,10 +95,6 @@ class ViewController: UIViewController {
         }
         
         self.locationManager.delegate = self
-        self.locationManager.startUpdatingLocation()
-        
-        
-        
     }
 
 
@@ -60,6 +105,11 @@ extension ViewController: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.first else { return }
+        
+        if self.startLocation == nil {
+            self.startLocation = location
+        }
+        
         print(location)
     }
     
