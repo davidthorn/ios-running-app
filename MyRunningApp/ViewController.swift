@@ -11,9 +11,6 @@ import CoreLocation
 import MyRunningAppMapView
 import MapKit
 
-
-
-
 class ViewController: UIViewController {
 
     @IBOutlet weak var timeLabel: UILabel!

@@ -143,6 +143,14 @@
 			path = Assets;
 			sourceTree = "<group>";
 		};
+		44552B7622DA266C005272CD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				44552B7422DA25EB005272CD /* TimeInterval+hmsFrom.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		449CCC8922DA01B1003EBEA3 = {
 			isa = PBXGroup;
 			children = (
@@ -170,13 +178,13 @@
 		449CCC9422DA01B1003EBEA3 /* MyRunningApp */ = {
 			isa = PBXGroup;
 			children = (
+				44552B7622DA266C005272CD /* Resources */,
 				449CCC9522DA01B1003EBEA3 /* AppDelegate.swift */,
 				449CCC9722DA01B1003EBEA3 /* ViewController.swift */,
 				449CCC9922DA01B1003EBEA3 /* Main.storyboard */,
 				449CCC9C22DA01B3003EBEA3 /* Assets.xcassets */,
 				449CCC9E22DA01B3003EBEA3 /* LaunchScreen.storyboard */,
 				449CCCA122DA01B3003EBEA3 /* Info.plist */,
-				44552B7422DA25EB005272CD /* TimeInterval+hmsFrom.swift */,
 			);
 			path = MyRunningApp;
 			sourceTree = "<group>";
