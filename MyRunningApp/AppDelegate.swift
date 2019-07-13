@@ -7,15 +7,19 @@
 //
 
 import UIKit
+import FirebaseAuth
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
+        FirebaseApp.configure()
+        Auth.auth().signInAnonymously { (_, _) in
+            print("signed in")
+        }
         
         return true
     }
