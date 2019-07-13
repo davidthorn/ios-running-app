@@ -10,9 +10,18 @@ import UIKit
 import CoreLocation
 import MyRunningAppMapView
 import MapKit
+import FirebaseDatabase
 
 class ViewController: UIViewController {
 
+    var activity: RunningActivity! {
+        didSet {
+            guard let act = self.activity else { return }
+            let ref = Database.database().reference(withPath: "activities").child(act.id)
+            ref.updateChildValues(act.dictionary)
+        }
+    }
+    
     @IBOutlet weak var timeLabel: UILabel!
     
     @IBOutlet weak var distanceLabel: UILabel!
@@ -49,6 +58,14 @@ class ViewController: UIViewController {
             guard let _ = self.endTime else { return }
             self.timer.invalidate()
             self.timer = nil
+            self.activity = self.activity.end(date: Date.init())
+            Database.database().goOnline()
+            self.activity = nil
+            self.startTime = nil
+            self.endTime = nil
+            self.startLocation = nil
+            self.lastLocation = nil
+            self.distance = 0
         }
     }
     
@@ -76,6 +93,7 @@ class ViewController: UIViewController {
         sender.backgroundColor = .darkGray
         stopButton.backgroundColor = self.stopButtonColor
         stopButton.isEnabled = true
+        Database.database().goOffline()
     }
     
     @IBAction func stopButtonAction(_ sender: UIButton) {
@@ -93,6 +111,8 @@ class ViewController: UIViewController {
             self.mapController.startLocation = location
         }
     }
+    
+    var lastLocation: CLLocation!
     
     var locationManager: CLLocationManager!
     
@@ -143,8 +163,6 @@ class ViewController: UIViewController {
         self.locationManager.delegate = self
     }
 
-    var lastLocation: CLLocation!
-
 }
 
 
@@ -157,10 +175,13 @@ extension ViewController: CLLocationManagerDelegate {
             self.startLocation = location
             self.lastLocation = location
             self.startTime = Date.init().timeIntervalSince1970
+            self.activity = RunningActivity.start(wayPoint: location.waypoint)
+            
         } else {
             self.mapController.addLocation(location: location)
             self.distance += self.lastLocation.distance(from: location)
             self.lastLocation = location
+            self.activity = self.activity.add(wayPoint: location.waypoint)
         }
     }
     
