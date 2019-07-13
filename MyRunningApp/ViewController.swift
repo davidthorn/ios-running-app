@@ -14,6 +14,20 @@ import MapKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var timeLabel: UILabel!
+    
+    @IBOutlet weak var distanceLabel: UILabel!
+    
+    var distance: CLLocationDistance = 0 {
+        didSet {
+            
+            guard Thread.current.isMainThread else {
+                fatalError("This should only be updated on the main thread")
+            }
+            
+            self.distanceLabel.text = self.distance.distanceString
+        }
+    }
+    
     var timer: Timer!
     
     var startTime: TimeInterval! {
@@ -129,6 +143,7 @@ class ViewController: UIViewController {
         self.locationManager.delegate = self
     }
 
+    var lastLocation: CLLocation!
 
 }
 
@@ -140,9 +155,12 @@ extension ViewController: CLLocationManagerDelegate {
         
         if self.startLocation == nil {
             self.startLocation = location
+            self.lastLocation = location
             self.startTime = Date.init().timeIntervalSince1970
         } else {
             self.mapController.addLocation(location: location)
+            self.distance += self.lastLocation.distance(from: location)
+            self.lastLocation = location
         }
     }
     
